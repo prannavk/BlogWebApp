@@ -36,6 +36,9 @@ public class LogoutServlet extends HttpServlet {
 
 	private void processRequest(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println("User Successfully Logged Out");
+		if(!req.getParameterNames().equals(null))
+			System.out.println(req.getParameter("key1") + ", " + req.getParameter("key2"));
+		
 
 		Cookie[] c = req.getCookies();
 		if (c != null) {

@@ -79,7 +79,7 @@ public class MyBlogsServlet extends HttpServlet {
 					out.printf("<td>%s</td>\r\n", b.getContents());
 					out.printf("<td>%s</td>\r\n", b.getCreated_time());
 					out.printf("<td>%d</td>\r\n", b.getCategoryid());
-					out.println("<td><p><a href=\"editblog\">Edit</a>  <a href=\"deleteblog\">Delete</a></p></td>\r\n");
+					out.printf("\n<td><p><a href=\"editblog?bid=%d\">Edit</a>  <a href=\"deleteblog\">Delete</a></p></td>\r\n", b.getId());
 					out.println("</tr>");
 				}
 			} catch (Exception e) {

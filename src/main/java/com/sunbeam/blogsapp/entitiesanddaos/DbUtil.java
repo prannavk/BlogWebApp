@@ -12,13 +12,7 @@ public class DbUtil {
 	public static final String DB_PASSWORD = "Amexbl618753ack";
 
 	static {
-		try {
 			System.out.println("DBUtil Class");
-			Class.forName(DB_DRIVER);
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-
 	}
 
 	public static Connection getCOnnection() throws SQLException {

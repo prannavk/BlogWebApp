@@ -74,6 +74,9 @@ public class MenuBoardServlet extends HttpServlet {
 		out.println("<li><a href=\"findBlogs\">FIND BLOGS</a></li>");
 		out.println("<li><a href=\"Categories\">CATEGORIES</a></li>");
 		out.println("<li><a href=\"logout\">SIGN OUT</a></li>");
+		//Demo of queryString
+		String a = "123", b = "qwe";
+		out.printf("\n<li><a href=\"logout?key1=%s&key2=%s\">SIGN OUT - mod</a></li>\n", a, b);
 		out.println("</ul>");
 		out.println("</div>");
 //		<div align="center">

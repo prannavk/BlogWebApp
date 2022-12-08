@@ -147,6 +147,26 @@ public class BlogDao implements Closeable {
 		}
 		return tfb;
 	}
+	
+	public Blog findById(int bid) throws SQLException{
+		Blog b = null;
+		String sq = "SELECT * FROM blogs WHERE id = ?";
+		try(PreparedStatement stmt = con.prepareStatement(sq)){
+			stmt.setInt(1, bid);
+			try(ResultSet rs = stmt.executeQuery()){
+				if(rs.next()) {
+					int id = rs.getInt("id");
+					String title = rs.getString("title");
+					String contents = rs.getString("contents");
+					java.util.Date newDate = new Date(rs.getDate("created_time").getTime());
+					int uid = rs.getInt("user_id");
+					int catid = rs.getInt("category_id");
+					b = new Blog(id, title, contents, newDate, uid, catid);
+				}
+			}
+		}
+		return b;
+	}
 
 //	public int save(User user) throws Exception {
 //		int cnt = -1;

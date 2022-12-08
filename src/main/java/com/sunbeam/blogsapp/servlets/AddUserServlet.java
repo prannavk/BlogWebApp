@@ -36,7 +36,7 @@ public class AddUserServlet extends HttpServlet {
 		out.println("Email: <input type='text' name='email' value=''/><br/><br/>");
 		out.println("Password: <input type='password' name='password' value=''/><br/><br/>");
 		out.println("Date: <input type='date' name='bd' value=''/><br/><br/>");
-		out.println("<input type='submit' value='Add Customer'/>");
+		out.println("<input type='submit' value='Register'/>");
 		out.println("</form>");
 		out.println("</body>");
 		out.println("</html>");

@@ -19,4 +19,12 @@
 		</cookie-config>
 		<tracking-mode>COOKIE</tracking-mode>
 	</session-config>
+	<context-param>
+		<param-name>AccessCode</param-name>
+		<param-value>78f8wfbh367uh46gdqma1v8c67</param-value>
+	</context-param>
 </web-app>
+
+
+
+
